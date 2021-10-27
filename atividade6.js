@@ -44,7 +44,17 @@ employees = [
     },
   ];
   
-  //retorna apenas os gerentes
-  gerentes = employees.filter((employee) => employee.category === "gerente");
+ //retorna apenas os gerentes
+ gerentes = employees.filter((employee) => employee.category === "gerente");
   console.log(gerentes);
-  
+
+  console.log("________________________________________________________________")
+  //retorna o empregado com menor id
+  let menorid = employees.reduce((ant,atual) => {
+    if(atual.id < ant.id)
+    return atual;
+    else
+    return ant;
+  },{id:9000000});
+
+  console.log(menorid);
