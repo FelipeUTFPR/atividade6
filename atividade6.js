@@ -58,3 +58,12 @@ employees = [
   },{id:9000000});
 
   console.log(menorid);
+
+  console.log("________________________________________________________________")
+
+  let uperCase = employees.map((empregado) => {
+    empregado.name = empregado.name.toUpperCase();
+    return empregado;
+  })
+
+  console.log(uperCase);
